@@ -82,6 +82,13 @@
       font-size: 0.95rem;
       line-height: 1.6;
     }
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
     .btn-copy {
       background: linear-gradient(to right, #3b82f6, #6366f1);
       color: white;
@@ -92,11 +99,15 @@
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.2s ease;
-      display: block;
-      margin: 0 auto 20px auto;
+    }
+    .btn-copy.code-btn {
+      background: linear-gradient(to right, #10b981, #059669);
+    }
+    .btn-copy.export-btn {
+      background: linear-gradient(to right, #f59e0b, #d97706);
     }
     .btn-copy:hover {
-      box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
       transform: translateY(-2px);
     }
     .btn-copy:active {
@@ -146,19 +157,23 @@
     <button class="tab-btn" onclick="switchTab('coqui', event)">Coqui Cloud</button>
   </div>
 
-  <button class="btn-copy" onclick="copySignature()">📋 Copy Selected Signature</button>
+  <div class="action-buttons">
+    <button class="btn-copy" onclick="copySignature()">📋 Copy Visual (Rich Text)</button>
+    <button class="btn-copy code-btn" onclick="copyHtmlCode()">🧑‍💻 Copy HTML Code</button>
+    <button class="btn-copy export-btn" onclick="downloadHtmlFile()">💾 Download HTML File</button>
+  </div>
 
   <!-- Wrapping signature in a div that we will execute a copy command on -->
   <div class="signature-card">
     
     <!-- COMBINED SIGNATURE -->
     <div id="sig-combined" class="signature-wrapper active">
-      <table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 650px; line-height: 1.4; font-size: 13px; background-color: transparent; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell (Dual-Identity) -->
-          <td valign="top" align="center" style="padding-right: 20px; border-right: 2px solid #3b82f6;">
+          <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
             <img src="https://github.com/RamonRiosJr.png" alt="Ramon Rios Jr." width="75" height="75" style="display: block; margin: 0 auto 12px auto; border-radius: 50%; border: 3px solid #3b82f6;" />
-            <img src="https://team.aurahos.io/web/image/1128-924aec7f/hOS%20-%20Human%20Operating%20System.webp" alt="Aura Logo" width="90" style="display: block; margin: 0 auto; opacity: 0.95;" />
+            <img src="https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/signatures/assets/aura-logo.webp" alt="Aura Logo" width="90" style="display: block; margin: 0 auto; opacity: 0.95;" />
           </td>
           
           <!-- Content Cell -->
@@ -186,14 +201,19 @@
               <a href="https://www.youtube.com/@humanos.foundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" height="22" style="border-radius: 12px;">
               </a>
-              <a href="https://www.facebook.com/HumanosFoundation" style="display: inline-block; text-decoration: none;">
+              <a href="https://www.facebook.com/HumanosFoundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-Facebook-1877F2?style=flat&logo=facebook&logoColor=white" alt="Facebook" height="22" style="border-radius: 12px;">
+              </a>
+              <a href="https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/signatures/assets/RamonRios.vcf" style="display: inline-block; text-decoration: none;">
+                <img src="https://img.shields.io/badge/-Save_Contact-6366f1?style=flat&logo=minutemailer&logoColor=white" alt="Save Contact" height="22" style="border-radius: 12px;">
               </a>
             </div>
 
             <div style="margin-bottom: 12px;">
-              <a href="https://calendar.coqui.cloud/ramon/strategic-tech-consulting" style="font-size: 13px; font-weight: bold; color: #10b981; text-decoration: none; display: inline-block; margin-bottom: 4px;">📅 Schedule an Architecture Briefing &rarr;</a><br>
-              <a href="https://humanos.foundation/whitepaper" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none;">📄 Read the Zero-Knowledge Whitepaper &rarr;</a>
+              <a href="https://RamonRios.NET" style="font-size: 13px; font-weight: bold; color: #10b981; text-decoration: none; display: inline-block; margin-bottom: 4px;">🚀 View Executive Architecture Portfolio &rarr;</a><br>
+              <a href="https://calendar.coqui.cloud/ramon/strategic-tech-consulting" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none; display: inline-block; margin-bottom: 4px;">📅 Schedule an Architecture Briefing &rarr;</a><br>
+              <a href="https://humanos.foundation/whitepaper" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none; display: inline-block; margin-bottom: 4px;">📄 Read the Zero-Knowledge Whitepaper &rarr;</a><br>
+              <a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" style="font-size: 12px; font-weight: bold; color: #f59e0b; text-decoration: none;">💖 Support our Mission on GoFundMe &rarr;</a>
             </div>
 
             <!-- Philosophy & Disclosure Area -->
@@ -212,21 +232,21 @@
 
     <!-- RAMONRIOS.NET SIGNATURE -->
     <div id="sig-ramonrios" class="signature-wrapper">
-      <table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 650px; line-height: 1.4; font-size: 13px; background-color: transparent; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell -->
-          <td valign="top" align="center" style="padding-right: 20px; border-right: 2px solid #3b82f6;">
+          <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
             <img src="https://github.com/RamonRiosJr.png" alt="Ramon Rios Jr." width="90" height="90" style="display: block; margin: 0 auto; border-radius: 50%; border: 3px solid #3b82f6;" />
           </td>
           
           <!-- Content Cell -->
           <td valign="top" style="padding-left: 20px; color: #1e293b;">
             <h3 style="margin: 0 0 2px 0; font-size: 18px; font-weight: 700; color: #0f172a;">Ramon Rios Jr.</h3>
-            <p style="margin: 0 0 10px 0; font-size: 14px; font-weight: 600; color: #3b82f6;">AI-Assisted Systems Architect & Consultant</p>
+            <p style="margin: 0 0 10px 0; font-size: 14px; font-weight: 600; color: #3b82f6;">Systems Architect, Solutions Expert & Founder</p>
             
             <p style="margin: 0 0 4px 0; font-size: 12px; color: #334155;">
               <strong style="color: #0f172a;">M:</strong> <a href="tel:3856303100" style="color: inherit; text-decoration: none;">385-630-3100</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-              <strong style="color: #0f172a;">E:</strong> <a href="mailto:ramon@humanos.foundation" style="color: #3b82f6; text-decoration: none;">ramon@humanos.foundation</a>
+              <strong style="color: #0f172a;">E:</strong> <a href="mailto:ramonluisrios@yahoo.com" style="color: #3b82f6; text-decoration: none;">ramonluisrios@yahoo.com</a>
             </p>
             <p style="margin: 0 0 12px 0; font-size: 12px; color: #334155;">
               <strong style="color: #0f172a;">W:</strong> <a href="https://RamonRios.NET" style="color: #3b82f6; text-decoration: none;">RamonRios.NET</a> &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -243,14 +263,18 @@
               <a href="https://www.youtube.com/@humanos.foundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" height="22" style="border-radius: 12px;">
               </a>
-              <a href="https://www.facebook.com/ingrios" style="display: inline-block; text-decoration: none;">
+              <a href="https://www.facebook.com/ingrios" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-Facebook-1877F2?style=flat&logo=facebook&logoColor=white" alt="Facebook" height="22" style="border-radius: 12px;">
+              </a>
+              <a href="https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/signatures/assets/RamonRios.vcf" style="display: inline-block; text-decoration: none;">
+                <img src="https://img.shields.io/badge/-Save_Contact-6366f1?style=flat&logo=minutemailer&logoColor=white" alt="Save Contact" height="22" style="border-radius: 12px;">
               </a>
             </div>
 
             <div style="margin-bottom: 12px;">
               <a href="https://RamonRios.NET" style="font-size: 13px; font-weight: bold; color: #10b981; text-decoration: none; display: inline-block; margin-bottom: 4px;">🚀 View Executive Architecture Portfolio &rarr;</a><br>
-              <a href="https://calendar.coqui.cloud/ramon/strategic-tech-consulting" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none; display: inline-block;">📅 Schedule an Architecture Briefing &rarr;</a>
+              <a href="https://calendar.coqui.cloud/ramon/strategic-tech-consulting" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none; display: inline-block; margin-bottom: 4px;">📅 Schedule an Architecture Briefing &rarr;</a><br>
+              <a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" style="font-size: 12px; font-weight: bold; color: #f59e0b; text-decoration: none;">💖 Support our Mission on GoFundMe &rarr;</a>
             </div>
 
             <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 480px;">
@@ -268,12 +292,12 @@
 
     <!-- AURA HOS SIGNATURE -->
     <div id="sig-aura" class="signature-wrapper">
-      <table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 650px; line-height: 1.4; font-size: 13px; background-color: transparent; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell -->
-          <td valign="top" align="center" style="padding-right: 20px; border-right: 2px solid #3b82f6;">
+          <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
             <img src="https://github.com/RamonRiosJr.png" alt="Ramon Rios Jr." width="75" height="75" style="display: block; margin: 0 auto 12px auto; border-radius: 50%; border: 3px solid #3b82f6;" />
-            <img src="https://team.aurahos.io/web/image/1128-924aec7f/hOS%20-%20Human%20Operating%20System.webp" alt="Aura Logo" width="90" style="display: block; margin: 0 auto; opacity: 0.95;" />
+            <img src="https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/signatures/assets/aura-logo.webp" alt="Aura Logo" width="90" style="display: block; margin: 0 auto; opacity: 0.95;" />
           </td>
           
           <!-- Content Cell -->
@@ -297,11 +321,16 @@
               <a href="https://github.com/RamonRiosJr/humanos.foundation/" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" height="22" style="border-radius: 12px;">
               </a>
+              <a href="https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/signatures/assets/RamonRios.vcf" style="display: inline-block; text-decoration: none;">
+                <img src="https://img.shields.io/badge/-Save_Contact-6366f1?style=flat&logo=minutemailer&logoColor=white" alt="Save Contact" height="22" style="border-radius: 12px;">
+              </a>
             </div>
 
             <div style="margin-bottom: 12px;">
-              <a href="https://calendar.coqui.cloud/ramon/strategic-tech-consulting" style="font-size: 13px; font-weight: bold; color: #10b981; text-decoration: none; display: inline-block; margin-bottom: 4px;">📅 Schedule a Tech Demo &rarr;</a><br>
-              <a href="https://humanos.foundation/whitepaper" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none;">📄 Read the Zero-Knowledge Whitepaper &rarr;</a>
+              <a href="https://RamonRios.NET" style="font-size: 13px; font-weight: bold; color: #10b981; text-decoration: none; display: inline-block; margin-bottom: 4px;">🚀 View Executive Architecture Portfolio &rarr;</a><br>
+              <a href="https://calendar.coqui.cloud/ramon/strategic-tech-consulting" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none; display: inline-block; margin-bottom: 4px;">📅 Schedule a Tech Demo &rarr;</a><br>
+              <a href="https://humanos.foundation/whitepaper" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none; display: inline-block; margin-bottom: 4px;">📄 Read the Zero-Knowledge Whitepaper &rarr;</a><br>
+              <a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" style="font-size: 12px; font-weight: bold; color: #f59e0b; text-decoration: none;">💖 Support our Mission on GoFundMe &rarr;</a>
             </div>
 
             <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 480px;">
@@ -319,10 +348,10 @@
 
     <!-- HUMANOS FOUNDATION SIGNATURE -->
     <div id="sig-humanos" class="signature-wrapper">
-      <table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 650px; line-height: 1.4; font-size: 13px; background-color: transparent; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell -->
-          <td valign="top" align="center" style="padding-right: 20px; border-right: 2px solid #3b82f6;">
+          <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
             <img src="https://github.com/RamonRiosJr.png" alt="Ramon Rios Jr." width="90" height="90" style="display: block; margin: 0 auto; border-radius: 50%; border: 3px solid #3b82f6;" />
           </td>
           
@@ -347,13 +376,18 @@
               <a href="https://www.youtube.com/@humanos.foundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" height="22" style="border-radius: 12px;">
               </a>
-              <a href="https://www.facebook.com/HumanosFoundation" style="display: inline-block; text-decoration: none;">
+              <a href="https://www.facebook.com/HumanosFoundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-Facebook-1877F2?style=flat&logo=facebook&logoColor=white" alt="Facebook" height="22" style="border-radius: 12px;">
+              </a>
+              <a href="https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/signatures/assets/RamonRios.vcf" style="display: inline-block; text-decoration: none;">
+                <img src="https://img.shields.io/badge/-Save_Contact-6366f1?style=flat&logo=minutemailer&logoColor=white" alt="Save Contact" height="22" style="border-radius: 12px;">
               </a>
             </div>
 
             <div style="margin-bottom: 12px;">
-              <a href="https://humanos.foundation/whitepaper" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none;">📄 Read the Zero-Knowledge Whitepaper &rarr;</a>
+              <a href="https://RamonRios.NET" style="font-size: 13px; font-weight: bold; color: #10b981; text-decoration: none; display: inline-block; margin-bottom: 4px;">🚀 View Executive Architecture Portfolio &rarr;</a><br>
+              <a href="https://humanos.foundation/whitepaper" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none; display: inline-block; margin-bottom: 4px;">📄 Read the Zero-Knowledge Whitepaper &rarr;</a><br>
+              <a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" style="font-size: 12px; font-weight: bold; color: #f59e0b; text-decoration: none;">💖 Support our Mission on GoFundMe &rarr;</a>
             </div>
 
             <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 480px;">
@@ -371,12 +405,12 @@
 
     <!-- COQUI CLOUD SIGNATURE -->
     <div id="sig-coqui" class="signature-wrapper">
-      <table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 650px; line-height: 1.4; font-size: 13px; background-color: transparent; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell -->
-          <td valign="top" align="center" style="padding-right: 20px; border-right: 2px solid #3b82f6;">
+          <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
             <img src="https://github.com/RamonRiosJr.png" alt="Ramon Rios Jr." width="75" height="75" style="display: block; margin: 0 auto 12px auto; border-radius: 50%; border: 3px solid #3b82f6;" />
-            <img src="https://coqui.cloud/web/image/website/1/logo/Coqui%20Cloud?unique=b4ce8f1" alt="Coqui Cloud Logo" width="90" style="display: block; margin: 0 auto;" />
+            <img src="https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/signatures/assets/coqui-logo.png" alt="Coqui Cloud Logo" width="90" style="display: block; margin: 0 auto;" />
           </td>
           
           <!-- Content Cell -->
@@ -386,7 +420,7 @@
             
             <p style="margin: 0 0 4px 0; font-size: 12px; color: #334155;">
               <strong style="color: #0f172a;">M:</strong> <a href="tel:3856303100" style="color: inherit; text-decoration: none;">385-630-3100</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-              <strong style="color: #0f172a;">E:</strong> <a href="mailto:info@coqui.cloud" style="color: #3b82f6; text-decoration: none;">info@coqui.cloud</a> &nbsp;|&nbsp; <a href="mailto:ramonluisrios@yahoo.com" style="color: #3b82f6; text-decoration: none;">ramonluisrios@yahoo.com</a>
+              <strong style="color: #0f172a;">E:</strong> <a href="mailto:info@coqui.cloud" style="color: #3b82f6; text-decoration: none;">info@coqui.cloud</a>
             </p>
             <p style="margin: 0 0 12px 0; font-size: 12px; color: #334155;">
               <strong style="color: #0f172a;">W:</strong> <a href="https://coqui.cloud" style="color: #3b82f6; text-decoration: none;">coqui.cloud</a> &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -400,10 +434,18 @@
               <a href="https://www.youtube.com/@coquicloud" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" height="22" style="border-radius: 12px;">
               </a>
+              <a href="https://www.facebook.com/coquicloud" style="display: inline-block; margin-right: 8px; text-decoration: none;">
+                <img src="https://img.shields.io/badge/-Facebook-1877F2?style=flat&logo=facebook&logoColor=white" alt="Facebook" height="22" style="border-radius: 12px;">
+              </a>
+              <a href="https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/signatures/assets/RamonRios.vcf" style="display: inline-block; text-decoration: none;">
+                <img src="https://img.shields.io/badge/-Save_Contact-6366f1?style=flat&logo=minutemailer&logoColor=white" alt="Save Contact" height="22" style="border-radius: 12px;">
+              </a>
             </div>
 
             <div style="margin-bottom: 12px;">
-              <a href="https://coqui.cloud" style="font-size: 13px; font-weight: bold; color: #10b981; text-decoration: none; display: inline-block; margin-bottom: 4px;">🚀 Explore Coqui Cloud Solutions &rarr;</a>
+              <a href="https://RamonRios.NET" style="font-size: 13px; font-weight: bold; color: #10b981; text-decoration: none; display: inline-block; margin-bottom: 4px;">🚀 View Executive Architecture Portfolio &rarr;</a><br>
+              <a href="https://coqui.cloud" style="font-size: 12px; font-weight: bold; color: #3b82f6; text-decoration: none; display: inline-block; margin-bottom: 4px;">☁️ Explore Coqui Cloud Solutions &rarr;</a><br>
+              <a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" style="font-size: 12px; font-weight: bold; color: #f59e0b; text-decoration: none;">💖 Support our Mission on GoFundMe &rarr;</a>
             </div>
 
             <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 480px;">
@@ -483,6 +525,75 @@
     
     // Clear selection
     windowSelection.removeAllRanges();
+  }
+
+  function copyHtmlCode() {
+    const el = document.getElementById(currentSig);
+    const htmlCode = el.innerHTML.trim();
+    
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(htmlCode).then(() => {
+        alert('HTML Code copied to clipboard! You can now paste this into signature settings that accept raw HTML.');
+      }).catch(err => {
+        fallbackCopyTextToClipboard(htmlCode);
+      });
+    } else {
+      fallbackCopyTextToClipboard(htmlCode);
+    }
+  }
+
+  function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    textArea.style.position = "fixed";
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.width = "2em";
+    textArea.style.height = "2em";
+    textArea.style.padding = "0";
+    textArea.style.border = "none";
+    textArea.style.outline = "none";
+    textArea.style.boxShadow = "none";
+    textArea.style.background = "transparent";
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        alert('HTML Code copied to clipboard! You can now paste this into signature settings that accept raw HTML.');
+      } else {
+        alert('Unable to copy HTML code.');
+      }
+    } catch (err) {
+      alert('Unable to copy HTML code.');
+    }
+    document.body.removeChild(textArea);
+  }
+
+  function downloadHtmlFile() {
+    const el = document.getElementById(currentSig);
+    const htmlCode = el.innerHTML.trim();
+    
+    const fullHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Email Signature</title>
+</head>
+<body>
+${htmlCode}
+</body>
+</html>`;
+
+    const blob = new Blob([fullHtml], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `signature_${currentSig.replace('sig-', '')}.html`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   }
 </script>
 </body>
