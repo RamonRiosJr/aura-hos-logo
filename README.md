@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Executive Identity & UI Assets
 
-# Run and deploy your AI Studio app
+An enterprise-grade utility package containing scalable brand assets and automated communication infrastructure for the **Humanos Foundation**, **Aura hOS**, and **Coqui Cloud** ecosystems.
 
-This contains everything you need to run your app locally.
+## 🏗️ Architecture Overview
 
-View your app in AI Studio: https://ai.studio/apps/64a8b762-f695-49f5-9439-94e0bf98aca6
+This module is split into two distinct toolsets, demonstrating a commitment to zero-dependency architecture, automated workflows, and highly resilient infrastructure.
 
-## Run Locally
+### 1. The Dynamic Signature Generator (`/signatures`)
+A client-side, zero-dependency dashboard for deploying highly customized executive email signatures.
 
-**Prerequisites:**  Node.js
+*   **Offline-First & Zero-Trust:** Operates entirely within the browser (`signature.html`) with zero backend dependencies, build steps, or vulnerable `npm` packages.
+*   **Infrastructure Hardening:** Employs globally distributed CDNs for image delivery, eliminating link rot and preventing external server single-points-of-failure.
+*   **Dynamic Customization Engine:** Features a JavaScript-powered toggle panel to dynamically inject or strip contact modules (Phone, GoFundMe, Executive Portfolio, vCard) before export.
+*   **Clean HTML Export:** Built-in DOM cloning guarantees that disabled/hidden elements are completely erased from the exported HTML payload, bypassing aggressive email client filtering.
 
+### 2. Neural Core React Component (`/src`)
+A scalable, state-driven animated SVG representation of the Aura hOS AI neural network.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+*   **State-Driven Animations:** Integrates seamlessly with React state architecture to visualize complex AI operations (`idle`, `listening`, `thinking`, `speaking`).
+*   **Responsive & Themeable:** Fully compatible with TailwindCSS dark/light modes and fluid responsive containers.
+*   **Performance Optimized:** Relies entirely on native SVG CSS keyframe animations rather than heavy external libraries, ensuring maximum frame rates and minimal bundle size.
+
+## 🚀 Quick Start
+
+### Email Signature Generator
+Simply navigate to the `/signatures/` directory and open `signature.html` in any web browser. Use the customization panel to tailor the payload, and click **Copy HTML Code** to deploy directly into your email client.
+
+### Neural Core Logo
+```bash
+# Install dependencies
+npm install
+
+# Start the Vite development server
+npm run dev
+```
+
+## 🔒 Security & Compliance
+This repository has been strictly audited. It contains zero hardcoded API keys, environment secrets, or proprietary backend architecture. All exposed contact artifacts (vCard, email, phone) are explicitly authorized for public executive networking.
