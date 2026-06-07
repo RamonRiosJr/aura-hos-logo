@@ -183,6 +183,12 @@
       <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-portfolio', this.checked)" style="accent-color: #38bdf8;"> Exec Portfolio Link</label>
       <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-gofundme', this.checked)" style="accent-color: #38bdf8;"> GoFundMe Mission</label>
       <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-vcard', this.checked)" style="accent-color: #38bdf8;"> Save Contact Badge</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-github', this.checked)" style="accent-color: #38bdf8;"> GitHub Badge</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-youtube-humanos', this.checked)" style="accent-color: #38bdf8;"> YouTube (Humanos)</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-youtube-coqui', this.checked)" style="accent-color: #38bdf8;"> YouTube (Coqui)</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-facebook-humanos', this.checked)" style="accent-color: #38bdf8;"> Facebook (Humanos)</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-facebook-coqui', this.checked)" style="accent-color: #38bdf8;"> Facebook (Coqui)</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-facebook-personal', this.checked)" style="accent-color: #38bdf8;"> Facebook (Personal)</label>
     </div>
     
     <div style="border-top: 1px solid #334155; padding-top: 15px;">
@@ -206,7 +212,7 @@
   <!-- Wrapping signature in a div that we will execute a copy command o    
     <!-- COMBINED (DEFAULT) SIGNATURE -->
     <div id="sig-combined" class="signature-wrapper active">
-      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell -->
           <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
@@ -236,9 +242,9 @@
               <span class="sig-github" style="display:inline-block;"><a href="https://github.com/RamonRiosJr/humanos.foundation/" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" height="22" style="border-radius: 12px;">
               </a></span>
-              <a href="https://www.youtube.com/@humanos.foundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
+              <span class="sig-youtube-humanos" style="display:inline-block;"><a href="https://www.youtube.com/@humanos.foundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" height="22" style="border-radius: 12px;">
-              </a>
+              </a></span>
               <span class="sig-facebook-humanos" style="display:inline-block;"><a href="https://www.facebook.com/HumanosFoundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-Facebook-1877F2?style=flat&logo=facebook&logoColor=white" alt="Facebook" height="22" style="border-radius: 12px;">
               </a></span>
@@ -254,7 +260,7 @@
               <span class="sig-gofundme" style="display:inline-block;"><a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" style="font-size: 12px; font-weight: bold; color: #f59e0b; text-decoration: none; display: inline-block; margin-bottom: 4px;">💖 Support our Mission on GoFundMe &rarr;</a><br></span>
             </div>
 
-            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 480px;">
+            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 100%;">
               <p style="margin: 0 0 4px 0; font-size: 11px; line-height: 1.4; color: #475569;">
                 <strong style="color: #3b82f6;">Vision:</strong> Architecting global health equity through Zero-IT clinical infrastructure. Backed by React, Node, Gemini AI & a Zero-Knowledge Cloud Backbone.
               </p>
@@ -269,7 +275,7 @@
 
     <!-- RAMONRIOS.NET SIGNATURE -->
     <div id="sig-ramonrios" class="signature-wrapper ">
-      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell -->
           <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
@@ -297,9 +303,9 @@
               <span class="sig-github" style="display:inline-block;"><a href="https://github.com/RamonRiosJr" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" height="22" style="border-radius: 12px;">
               </a></span>
-              <a href="https://www.youtube.com/@humanos.foundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
+              <span class="sig-youtube-humanos" style="display:inline-block;"><a href="https://www.youtube.com/@humanos.foundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" height="22" style="border-radius: 12px;">
-              </a>
+              </a></span>
               <span class="sig-facebook-personal" style="display:inline-block;"><a href="https://www.facebook.com/ingrios" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-Facebook-1877F2?style=flat&logo=facebook&logoColor=white" alt="Facebook" height="22" style="border-radius: 12px;">
               </a></span>
@@ -314,7 +320,7 @@
               <span class="sig-gofundme" style="display:inline-block;"><a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" style="font-size: 12px; font-weight: bold; color: #f59e0b; text-decoration: none; display: inline-block; margin-bottom: 4px;">💖 Support our Mission on GoFundMe &rarr;</a><br></span>
             </div>
 
-            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 480px;">
+            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 100%;">
               <p style="margin: 0 0 4px 0; font-size: 11px; line-height: 1.4; color: #475569;">
                 <strong style="color: #3b82f6;">Specializations:</strong> Enterprise Cloud Architecture | Generative AI Ecosystems | Zero-Knowledge Systems | Frontend/Backend Convergence
               </p>
@@ -329,7 +335,7 @@
 
     <!-- AURA HOS SIGNATURE -->
     <div id="sig-aura" class="signature-wrapper ">
-      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell -->
           <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
@@ -370,7 +376,7 @@
               <span class="sig-gofundme" style="display:inline-block;"><a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" style="font-size: 12px; font-weight: bold; color: #f59e0b; text-decoration: none; display: inline-block; margin-bottom: 4px;">💖 Support our Mission on GoFundMe &rarr;</a><br></span>
             </div>
 
-            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 480px;">
+            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 100%;">
               <p style="margin: 0 0 4px 0; font-size: 11px; line-height: 1.4; color: #475569;">
                 <strong style="color: #3b82f6;">Vision:</strong> Architecting global health equity through Zero-IT clinical infrastructure.
               </p>
@@ -385,7 +391,7 @@
 
     <!-- HUMANOS FOUNDATION SIGNATURE -->
     <div id="sig-humanos" class="signature-wrapper ">
-      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell -->
           <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
@@ -411,9 +417,9 @@
               <a href="https://www.linkedin.com/in/ramon-rios-a8ba3035/" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" height="22" style="border-radius: 12px;">
               </a>
-              <a href="https://www.youtube.com/@humanos.foundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
+              <span class="sig-youtube-humanos" style="display:inline-block;"><a href="https://www.youtube.com/@humanos.foundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" height="22" style="border-radius: 12px;">
-              </a>
+              </a></span>
               <span class="sig-facebook-humanos" style="display:inline-block;"><a href="https://www.facebook.com/HumanosFoundation" style="display: inline-block; margin-right: 8px; text-decoration: none;">
                 <img src="https://img.shields.io/badge/-Facebook-1877F2?style=flat&logo=facebook&logoColor=white" alt="Facebook" height="22" style="border-radius: 12px;">
               </a></span>
@@ -428,7 +434,7 @@
               <span class="sig-gofundme" style="display:inline-block;"><a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" style="font-size: 12px; font-weight: bold; color: #f59e0b; text-decoration: none; display: inline-block; margin-bottom: 4px;">💖 Support our Mission on GoFundMe &rarr;</a><br></span>
             </div>
 
-            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 480px;">
+            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 100%;">
               <p style="margin: 0 0 4px 0; font-size: 11px; line-height: 1.4; color: #475569;">
                 <strong style="color: #3b82f6;">Vision:</strong> Architecting global health equity through Zero-IT clinical infrastructure. Backed by React, Node, Gemini AI & a Zero-Knowledge Cloud Backbone.
               </p>
@@ -443,7 +449,7 @@
 
     <!-- COQUI CLOUD SIGNATURE -->
     <div id="sig-coqui" class="signature-wrapper ">
-      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell -->
           <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
@@ -486,7 +492,7 @@
               <span class="sig-gofundme" style="display:inline-block;"><a href="https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom" style="font-size: 12px; font-weight: bold; color: #f59e0b; text-decoration: none; display: inline-block; margin-bottom: 4px;">💖 Support our Mission on GoFundMe &rarr;</a><br></span>
             </div>
 
-            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 480px;">
+            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 100%;">
               <p style="margin: 0 0 4px 0; font-size: 11px; line-height: 1.4; color: #475569;">
                 <strong style="color: #3b82f6;">Vision:</strong> Delivering highly secure, architect-grade cloud solutions for modern enterprise ecosystems.
               </p>

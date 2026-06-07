@@ -22,6 +22,12 @@ function generateUIPanel(brands) {
       <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-portfolio', this.checked)" style="accent-color: #38bdf8;"> Exec Portfolio Link</label>
       <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-gofundme', this.checked)" style="accent-color: #38bdf8;"> GoFundMe Mission</label>
       <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-vcard', this.checked)" style="accent-color: #38bdf8;"> Save Contact Badge</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-github', this.checked)" style="accent-color: #38bdf8;"> GitHub Badge</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-youtube-humanos', this.checked)" style="accent-color: #38bdf8;"> YouTube (Humanos)</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-youtube-coqui', this.checked)" style="accent-color: #38bdf8;"> YouTube (Coqui)</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-facebook-humanos', this.checked)" style="accent-color: #38bdf8;"> Facebook (Humanos)</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-facebook-coqui', this.checked)" style="accent-color: #38bdf8;"> Facebook (Coqui)</label>
+      <label style="font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" checked onchange="toggleElement('sig-facebook-personal', this.checked)" style="accent-color: #38bdf8;"> Facebook (Personal)</label>
     </div>
     
     <div style="border-top: 1px solid #334155; padding-top: 15px;">
@@ -90,7 +96,7 @@ function generateSignatureHTML(brand, index) {
   return `
     <!-- ${brand.tabLabel.toUpperCase()} SIGNATURE -->
     <div id="sig-${brand.id}" class="signature-wrapper ${isActive}">
-      <table cellpadding="0" cellspacing="0" border="0" width="600" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 600px; min-width: 600px; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
         <tr>
           <!-- Logo Cell -->
           <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
@@ -118,7 +124,7 @@ function generateSignatureHTML(brand, index) {
               ${linksHtml}
             </div>
 
-            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 480px;">
+            <div style="border-top: 1px solid #cbd5e1; padding-top: 10px; max-width: 100%;">
               <p style="margin: 0 0 4px 0; font-size: 11px; line-height: 1.4; color: #475569;">
                 <strong style="color: #3b82f6;">${brand.visionLabel || 'Vision:'}</strong> ${brand.vision}
               </p>

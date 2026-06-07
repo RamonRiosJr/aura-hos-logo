@@ -4,8 +4,19 @@
       "id": "combined",
       "tabLabel": "Combined (Default)",
       "logos": [
-        { "src": "https://github.com/RamonRiosJr.png", "width": "75", "height": "75", "radius": "50%", "border": "3px solid #3b82f6", "margin": "0 auto 12px auto" },
-        { "src": "https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/src/assets/aura-hos.png", "width": "90", "opacity": "0.95" }
+        {
+          "src": "https://github.com/RamonRiosJr.png",
+          "width": "75",
+          "height": "75",
+          "radius": "50%",
+          "border": "3px solid #3b82f6",
+          "margin": "0 auto 12px auto"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/src/assets/aura-hos.png",
+          "width": "90",
+          "opacity": "0.95"
+        }
       ],
       "name": "Ramon Rios Jr.",
       "title": "Lead Systems Architect & Passionate Technologist",
@@ -13,22 +24,70 @@
       "phone": "385-630-3100",
       "email": "ramon@humanos.foundation",
       "websites": [
-        { "label": "W:", "url": "https://humanos.foundation", "text": "humanos.foundation" },
-        { "label": "Aura:", "url": "https://aurahos.io", "text": "aurahos.io" },
-        { "label": "Blog:", "url": "https://RamonRios.NET", "text": "RamonRios.NET" }
+        {
+          "label": "W:",
+          "url": "https://humanos.foundation",
+          "text": "humanos.foundation"
+        },
+        {
+          "label": "Aura:",
+          "url": "https://aurahos.io",
+          "text": "aurahos.io"
+        },
+        {
+          "label": "Blog:",
+          "url": "https://RamonRios.NET",
+          "text": "RamonRios.NET"
+        }
       ],
       "socials": [
-        { "type": "linkedin", "url": "https://www.linkedin.com/in/ramon-rios-a8ba3035/" },
-        { "type": "github", "url": "https://github.com/RamonRiosJr/humanos.foundation/", "badge": "sig-github" },
-        { "type": "youtube", "url": "https://www.youtube.com/@humanos.foundation" },
-        { "type": "facebook", "url": "https://www.facebook.com/HumanosFoundation", "badge": "sig-facebook-humanos" },
-        { "type": "vcard", "url": "https://RamonRiosJr.github.io/aura-hos-logo/signatures/assets/RamonRios.vcf" }
+        {
+          "type": "linkedin",
+          "url": "https://www.linkedin.com/in/ramon-rios-a8ba3035/"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/RamonRiosJr/humanos.foundation/",
+          "badge": "sig-github"
+        },
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/@humanos.foundation",
+          "badge": "sig-youtube-humanos"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/HumanosFoundation",
+          "badge": "sig-facebook-humanos"
+        },
+        {
+          "type": "vcard",
+          "url": "https://RamonRiosJr.github.io/aura-hos-logo/signatures/assets/RamonRios.vcf"
+        }
       ],
       "actionLinks": [
-        { "class": "sig-portfolio", "color": "#10b981", "url": "https://RamonRios.NET", "text": "🚀 View Executive Architecture Portfolio &rarr;" },
-        { "color": "#3b82f6", "url": "https://calendar.coqui.cloud/ramon/strategic-tech-consulting", "text": "📅 Schedule an Architecture Briefing &rarr;" },
-        { "color": "#3b82f6", "url": "https://humanos.foundation/whitepaper", "text": "📄 Read the Zero-Knowledge Whitepaper &rarr;" },
-        { "class": "sig-gofundme", "color": "#f59e0b", "url": "https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom", "text": "💖 Support our Mission on GoFundMe &rarr;" }
+        {
+          "class": "sig-portfolio",
+          "color": "#10b981",
+          "url": "https://RamonRios.NET",
+          "text": "🚀 View Executive Architecture Portfolio &rarr;"
+        },
+        {
+          "color": "#3b82f6",
+          "url": "https://calendar.coqui.cloud/ramon/strategic-tech-consulting",
+          "text": "📅 Schedule an Architecture Briefing &rarr;"
+        },
+        {
+          "color": "#3b82f6",
+          "url": "https://humanos.foundation/whitepaper",
+          "text": "📄 Read the Zero-Knowledge Whitepaper &rarr;"
+        },
+        {
+          "class": "sig-gofundme",
+          "color": "#f59e0b",
+          "url": "https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom",
+          "text": "💖 Support our Mission on GoFundMe &rarr;"
+        }
       ],
       "vision": "Architecting global health equity through Zero-IT clinical infrastructure. Backed by React, Node, Gemini AI & a Zero-Knowledge Cloud Backbone."
     },
@@ -36,27 +95,74 @@
       "id": "ramonrios",
       "tabLabel": "RamonRios.net",
       "logos": [
-        { "src": "https://github.com/RamonRiosJr.png", "width": "90", "height": "90", "radius": "50%", "border": "3px solid #3b82f6", "margin": "0 auto" }
+        {
+          "src": "https://github.com/RamonRiosJr.png",
+          "width": "90",
+          "height": "90",
+          "radius": "50%",
+          "border": "3px solid #3b82f6",
+          "margin": "0 auto"
+        }
       ],
       "name": "Ramon Rios Jr.",
       "title": "Enterprise Systems Architect & Passionate Technologist",
       "phone": "385-630-3100",
       "email": "ramonluisrios@yahoo.com",
       "websites": [
-        { "label": "W:", "url": "https://RamonRios.NET", "text": "RamonRios.NET" },
-        { "label": "GitHub:", "url": "https://github.com/RamonRiosJr", "text": "github.com/RamonRiosJr" }
+        {
+          "label": "W:",
+          "url": "https://RamonRios.NET",
+          "text": "RamonRios.NET"
+        },
+        {
+          "label": "GitHub:",
+          "url": "https://github.com/RamonRiosJr",
+          "text": "github.com/RamonRiosJr"
+        }
       ],
       "socials": [
-        { "type": "linkedin", "url": "https://www.linkedin.com/in/ramon-rios-a8ba3035/" },
-        { "type": "github", "url": "https://github.com/RamonRiosJr", "badge": "sig-github" },
-        { "type": "youtube", "url": "https://www.youtube.com/@humanos.foundation" },
-        { "type": "facebook", "url": "https://www.facebook.com/ingrios", "badge": "sig-facebook-personal" },
-        { "type": "vcard", "url": "https://RamonRiosJr.github.io/aura-hos-logo/signatures/assets/RamonRios.vcf" }
+        {
+          "type": "linkedin",
+          "url": "https://www.linkedin.com/in/ramon-rios-a8ba3035/"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/RamonRiosJr",
+          "badge": "sig-github"
+        },
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/@humanos.foundation",
+          "badge": "sig-youtube-humanos"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/ingrios",
+          "badge": "sig-facebook-personal"
+        },
+        {
+          "type": "vcard",
+          "url": "https://RamonRiosJr.github.io/aura-hos-logo/signatures/assets/RamonRios.vcf"
+        }
       ],
       "actionLinks": [
-        { "class": "sig-portfolio", "color": "#10b981", "url": "https://RamonRios.NET", "text": "🚀 View Executive Architecture Portfolio &rarr;" },
-        { "color": "#3b82f6", "url": "https://calendar.coqui.cloud/ramon/strategic-tech-consulting", "text": "📅 Schedule an Architecture Briefing &rarr;" },
-        { "class": "sig-gofundme", "color": "#f59e0b", "url": "https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom", "text": "💖 Support our Mission on GoFundMe &rarr;" }
+        {
+          "class": "sig-portfolio",
+          "color": "#10b981",
+          "url": "https://RamonRios.NET",
+          "text": "🚀 View Executive Architecture Portfolio &rarr;"
+        },
+        {
+          "color": "#3b82f6",
+          "url": "https://calendar.coqui.cloud/ramon/strategic-tech-consulting",
+          "text": "📅 Schedule an Architecture Briefing &rarr;"
+        },
+        {
+          "class": "sig-gofundme",
+          "color": "#f59e0b",
+          "url": "https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom",
+          "text": "💖 Support our Mission on GoFundMe &rarr;"
+        }
       ],
       "vision": "Enterprise Cloud Architecture | Generative AI Ecosystems | Zero-Knowledge Systems | Frontend/Backend Convergence",
       "visionLabel": "Specializations:"
@@ -65,8 +171,19 @@
       "id": "aura",
       "tabLabel": "Aura hOS",
       "logos": [
-        { "src": "https://github.com/RamonRiosJr.png", "width": "75", "height": "75", "radius": "50%", "border": "3px solid #3b82f6", "margin": "0 auto 12px auto" },
-        { "src": "https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/src/assets/aura-hos.png", "width": "90", "opacity": "0.95" }
+        {
+          "src": "https://github.com/RamonRiosJr.png",
+          "width": "75",
+          "height": "75",
+          "radius": "50%",
+          "border": "3px solid #3b82f6",
+          "margin": "0 auto 12px auto"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/src/assets/aura-hos.png",
+          "width": "90",
+          "opacity": "0.95"
+        }
       ],
       "name": "Ramon Rios Jr.",
       "title": "Lead Systems Architect & Core Technologist",
@@ -74,19 +191,55 @@
       "phone": "385-630-3100",
       "email": "ramon@humanos.foundation",
       "websites": [
-        { "label": "W:", "url": "https://aurahos.io", "text": "aurahos.io" },
-        { "label": "Blog:", "url": "https://RamonRios.NET", "text": "RamonRios.NET" }
+        {
+          "label": "W:",
+          "url": "https://aurahos.io",
+          "text": "aurahos.io"
+        },
+        {
+          "label": "Blog:",
+          "url": "https://RamonRios.NET",
+          "text": "RamonRios.NET"
+        }
       ],
       "socials": [
-        { "type": "linkedin", "url": "https://www.linkedin.com/in/ramon-rios-a8ba3035/" },
-        { "type": "github", "url": "https://github.com/RamonRiosJr/humanos.foundation/", "badge": "sig-github" },
-        { "type": "vcard", "url": "https://RamonRiosJr.github.io/aura-hos-logo/signatures/assets/RamonRios.vcf" }
+        {
+          "type": "linkedin",
+          "url": "https://www.linkedin.com/in/ramon-rios-a8ba3035/"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/RamonRiosJr/humanos.foundation/",
+          "badge": "sig-github"
+        },
+        {
+          "type": "vcard",
+          "url": "https://RamonRiosJr.github.io/aura-hos-logo/signatures/assets/RamonRios.vcf"
+        }
       ],
       "actionLinks": [
-        { "class": "sig-portfolio", "color": "#10b981", "url": "https://RamonRios.NET", "text": "🚀 View Executive Architecture Portfolio &rarr;" },
-        { "color": "#3b82f6", "url": "https://calendar.coqui.cloud/ramon/strategic-tech-consulting", "text": "📅 Schedule a Tech Demo &rarr;" },
-        { "color": "#3b82f6", "url": "https://humanos.foundation/whitepaper", "text": "📄 Read the Zero-Knowledge Whitepaper &rarr;" },
-        { "class": "sig-gofundme", "color": "#f59e0b", "url": "https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom", "text": "💖 Support our Mission on GoFundMe &rarr;" }
+        {
+          "class": "sig-portfolio",
+          "color": "#10b981",
+          "url": "https://RamonRios.NET",
+          "text": "🚀 View Executive Architecture Portfolio &rarr;"
+        },
+        {
+          "color": "#3b82f6",
+          "url": "https://calendar.coqui.cloud/ramon/strategic-tech-consulting",
+          "text": "📅 Schedule a Tech Demo &rarr;"
+        },
+        {
+          "color": "#3b82f6",
+          "url": "https://humanos.foundation/whitepaper",
+          "text": "📄 Read the Zero-Knowledge Whitepaper &rarr;"
+        },
+        {
+          "class": "sig-gofundme",
+          "color": "#f59e0b",
+          "url": "https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom",
+          "text": "💖 Support our Mission on GoFundMe &rarr;"
+        }
       ],
       "vision": "Architecting global health equity through Zero-IT clinical infrastructure."
     },
@@ -94,8 +247,18 @@
       "id": "humanos",
       "tabLabel": "Humanos Foundation",
       "logos": [
-        { "src": "https://github.com/RamonRiosJr.png", "width": "75", "height": "75", "radius": "50%", "border": "3px solid #3b82f6", "margin": "0 auto 12px auto" },
-        { "src": "https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/src/assets/hos-humnos-foundation.png", "width": "90" }
+        {
+          "src": "https://github.com/RamonRiosJr.png",
+          "width": "75",
+          "height": "75",
+          "radius": "50%",
+          "border": "3px solid #3b82f6",
+          "margin": "0 auto 12px auto"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/src/assets/hos-humnos-foundation.png",
+          "width": "90"
+        }
       ],
       "name": "Ramon Rios Jr.",
       "title": "Systems Architect & Tech Visionary",
@@ -103,19 +266,55 @@
       "phone": "385-630-3100",
       "email": "ramon@humanos.foundation",
       "websites": [
-        { "label": "W:", "url": "https://humanos.foundation", "text": "humanos.foundation" },
-        { "label": "Blog:", "url": "https://RamonRios.NET", "text": "RamonRios.NET" }
+        {
+          "label": "W:",
+          "url": "https://humanos.foundation",
+          "text": "humanos.foundation"
+        },
+        {
+          "label": "Blog:",
+          "url": "https://RamonRios.NET",
+          "text": "RamonRios.NET"
+        }
       ],
       "socials": [
-        { "type": "linkedin", "url": "https://www.linkedin.com/in/ramon-rios-a8ba3035/" },
-        { "type": "youtube", "url": "https://www.youtube.com/@humanos.foundation" },
-        { "type": "facebook", "url": "https://www.facebook.com/HumanosFoundation", "badge": "sig-facebook-humanos" },
-        { "type": "vcard", "url": "https://RamonRiosJr.github.io/aura-hos-logo/signatures/assets/RamonRios.vcf" }
+        {
+          "type": "linkedin",
+          "url": "https://www.linkedin.com/in/ramon-rios-a8ba3035/"
+        },
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/@humanos.foundation",
+          "badge": "sig-youtube-humanos"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/HumanosFoundation",
+          "badge": "sig-facebook-humanos"
+        },
+        {
+          "type": "vcard",
+          "url": "https://RamonRiosJr.github.io/aura-hos-logo/signatures/assets/RamonRios.vcf"
+        }
       ],
       "actionLinks": [
-        { "class": "sig-portfolio", "color": "#10b981", "url": "https://RamonRios.NET", "text": "🚀 View Executive Architecture Portfolio &rarr;" },
-        { "color": "#3b82f6", "url": "https://humanos.foundation/whitepaper", "text": "📄 Read the Zero-Knowledge Whitepaper &rarr;" },
-        { "class": "sig-gofundme", "color": "#f59e0b", "url": "https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom", "text": "💖 Support our Mission on GoFundMe &rarr;" }
+        {
+          "class": "sig-portfolio",
+          "color": "#10b981",
+          "url": "https://RamonRios.NET",
+          "text": "🚀 View Executive Architecture Portfolio &rarr;"
+        },
+        {
+          "color": "#3b82f6",
+          "url": "https://humanos.foundation/whitepaper",
+          "text": "📄 Read the Zero-Knowledge Whitepaper &rarr;"
+        },
+        {
+          "class": "sig-gofundme",
+          "color": "#f59e0b",
+          "url": "https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom",
+          "text": "💖 Support our Mission on GoFundMe &rarr;"
+        }
       ],
       "vision": "Architecting global health equity through Zero-IT clinical infrastructure. Backed by React, Node, Gemini AI & a Zero-Knowledge Cloud Backbone."
     },
@@ -123,8 +322,18 @@
       "id": "coqui",
       "tabLabel": "Coqui Cloud",
       "logos": [
-        { "src": "https://github.com/RamonRiosJr.png", "width": "75", "height": "75", "radius": "50%", "border": "3px solid #3b82f6", "margin": "0 auto 12px auto" },
-        { "src": "https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/signatures/assets/coqui-logo.png", "width": "90" }
+        {
+          "src": "https://github.com/RamonRiosJr.png",
+          "width": "75",
+          "height": "75",
+          "radius": "50%",
+          "border": "3px solid #3b82f6",
+          "margin": "0 auto 12px auto"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/RamonRiosJr/aura-hos-logo/main/signatures/assets/coqui-logo.png",
+          "width": "90"
+        }
       ],
       "name": "Ramon Rios Jr.",
       "title": "Principal Systems Architect & Cloud Technologist",
@@ -132,19 +341,55 @@
       "phone": "385-630-3100",
       "email": "info@coqui.cloud",
       "websites": [
-        { "label": "W:", "url": "https://coqui.cloud", "text": "coqui.cloud" },
-        { "label": "GitHub:", "url": "https://github.com/RamonRiosJr", "text": "github.com/RamonRiosJr" }
+        {
+          "label": "W:",
+          "url": "https://coqui.cloud",
+          "text": "coqui.cloud"
+        },
+        {
+          "label": "GitHub:",
+          "url": "https://github.com/RamonRiosJr",
+          "text": "github.com/RamonRiosJr"
+        }
       ],
       "socials": [
-        { "type": "linkedin", "url": "https://www.linkedin.com/in/ramon-rios-a8ba3035/" },
-        { "type": "youtube", "url": "https://www.youtube.com/@coquicloud", "badge": "sig-youtube-coqui" },
-        { "type": "facebook", "url": "https://www.facebook.com/coquicloud", "badge": "sig-facebook-coqui" },
-        { "type": "vcard", "url": "https://RamonRiosJr.github.io/aura-hos-logo/signatures/assets/RamonRios.vcf" }
+        {
+          "type": "linkedin",
+          "url": "https://www.linkedin.com/in/ramon-rios-a8ba3035/"
+        },
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/@coquicloud",
+          "badge": "sig-youtube-coqui"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/coquicloud",
+          "badge": "sig-facebook-coqui"
+        },
+        {
+          "type": "vcard",
+          "url": "https://RamonRiosJr.github.io/aura-hos-logo/signatures/assets/RamonRios.vcf"
+        }
       ],
       "actionLinks": [
-        { "class": "sig-portfolio", "color": "#10b981", "url": "https://RamonRios.NET", "text": "🚀 View Executive Architecture Portfolio &rarr;" },
-        { "color": "#3b82f6", "url": "https://coqui.cloud", "text": "☁️ Explore Coqui Cloud Solutions &rarr;" },
-        { "class": "sig-gofundme", "color": "#f59e0b", "url": "https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom", "text": "💖 Support our Mission on GoFundMe &rarr;" }
+        {
+          "class": "sig-portfolio",
+          "color": "#10b981",
+          "url": "https://RamonRios.NET",
+          "text": "🚀 View Executive Architecture Portfolio &rarr;"
+        },
+        {
+          "color": "#3b82f6",
+          "url": "https://coqui.cloud",
+          "text": "☁️ Explore Coqui Cloud Solutions &rarr;"
+        },
+        {
+          "class": "sig-gofundme",
+          "color": "#f59e0b",
+          "url": "https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom",
+          "text": "💖 Support our Mission on GoFundMe &rarr;"
+        }
       ],
       "vision": "Delivering highly secure, architect-grade cloud solutions for modern enterprise ecosystems."
     }
