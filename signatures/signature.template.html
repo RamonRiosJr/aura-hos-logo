@@ -212,6 +212,10 @@
 <script>
   let currentSig = 'sig-combined';
 
+  document.addEventListener('DOMContentLoaded', () => {
+    switchTab('combined');
+  });
+
   function switchTab(tabId, event) {
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.signature-wrapper').forEach(wrapper => wrapper.classList.remove('active'));
@@ -221,7 +225,25 @@
     }
     
     currentSig = 'sig-' + tabId;
-    document.getElementById(currentSig).classList.add('active');
+    const activeWrapper = document.getElementById(currentSig);
+    activeWrapper.classList.add('active');
+
+    // Apply presets to checkboxes
+    if (activeWrapper.dataset.preset) {
+      try {
+        const presetClasses = JSON.parse(activeWrapper.dataset.preset);
+        document.querySelectorAll('.customization-panel input[type="checkbox"]').forEach(cb => {
+          const targetClass = cb.getAttribute('data-target');
+          if (targetClass) {
+            const shouldBeChecked = presetClasses.includes(targetClass);
+            cb.checked = shouldBeChecked;
+            toggleElement(targetClass, shouldBeChecked);
+          }
+        });
+      } catch (e) {
+        console.error('Error parsing preset data', e);
+      }
+    }
   }
 
   function copySignature() {
