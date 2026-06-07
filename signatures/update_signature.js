@@ -11,6 +11,11 @@ const uiPanel = `
       <label><input type="checkbox" checked onchange="toggleElement('sig-email', this.checked)"> Email Address</label>
       <label><input type="checkbox" checked onchange="toggleElement('sig-web', this.checked)"> Website & Repo Links</label>
       <label><input type="checkbox" checked onchange="toggleElement('sig-socials', this.checked)"> Social Badges</label>
+      <label><input type="checkbox" checked onchange="toggleElement('sig-youtube-coqui', this.checked)"> YouTube Coqui Cloud</label>
+      <label><input type="checkbox" checked onchange="toggleElement('sig-facebook-personal', this.checked)"> Facebook Personal</label>
+      <label><input type="checkbox" checked onchange="toggleElement('sig-facebook-coqui', this.checked)"> Facebook Coqui Cloud</label>
+      <label><input type="checkbox" checked onchange="toggleElement('sig-facebook-humanos', this.checked)"> Facebook Humanos</label>
+      <label><input type="checkbox" checked onchange="toggleElement('sig-github', this.checked)"> GitHub</label>
       <label><input type="checkbox" checked onchange="toggleElement('sig-portfolio', this.checked)"> Exec Portfolio Link</label>
       <label><input type="checkbox" checked onchange="toggleElement('sig-gofundme', this.checked)"> GoFundMe Mission</label>
       <label><input type="checkbox" checked onchange="toggleElement('sig-whitepaper', this.checked)"> Whitepaper Link</label>
@@ -20,7 +25,11 @@ const uiPanel = `
   </div>
 `;
 
-content = content.replace('<div class="actions">', uiPanel + '\n  <div class="actions">');
+if (content.includes('<div class="actions">')) {
+  content = content.replace('<div class="actions">', uiPanel + '\n  <div class="actions">');
+} else {
+  content = content.replace('<div class="action-buttons">', uiPanel + '\n  <div class="action-buttons">');
+}
 
 // Add CSS for the panel
 const css = `
@@ -75,6 +84,13 @@ content = content.replace(/(<a href="https:\/\/www\.linkedin\.com[\s\S]*?<\/a>)/
 content = content.replace(/(<a href="https:\/\/github\.com[^>]*>\s*<img[^>]*>[\s\S]*?<\/a>)/g, '<span class="sig-socials" style="display:inline-block;">$1</span>');
 content = content.replace(/(<a href="https:\/\/www\.youtube\.com[\s\S]*?<\/a>)/g, '<span class="sig-socials" style="display:inline-block;">$1</span>');
 content = content.replace(/(<a href="https:\/\/www\.facebook\.com[\s\S]*?<\/a>)/g, '<span class="sig-socials" style="display:inline-block;">$1</span>');
+
+// Specific checkboxes for individual socials
+content = content.replace(/(<a href="https:\/\/www\.youtube\.com\/@coquicloud"[^>]*>[\s\S]*?<\/a>)/g, '<span class="sig-youtube-coqui" style="display:inline-block;">$1</span>');
+content = content.replace(/(<a href="https:\/\/www\.facebook\.com\/ingrios"[^>]*>[\s\S]*?<\/a>)/g, '<span class="sig-facebook-personal" style="display:inline-block;">$1</span>');
+content = content.replace(/(<a href="https:\/\/www\.facebook\.com\/coquicloud"[^>]*>[\s\S]*?<\/a>)/g, '<span class="sig-facebook-coqui" style="display:inline-block;">$1</span>');
+content = content.replace(/(<a href="https:\/\/www\.facebook\.com\/[Hh]umanos[Ff]oundation"[^>]*>[\s\S]*?<\/a>)/gi, '<span class="sig-facebook-humanos" style="display:inline-block;">$1</span>');
+content = content.replace(/(<a href="https:\/\/github\.com\/RamonRiosJr"[^>]*>[\s\S]*?<\/a>)/g, '<span class="sig-github" style="display:inline-block;">$1</span>');
 
 // The Portfolio link
 content = content.replace(/(<a href="https:\/\/RamonRios\.NET"[^>]*>🚀 View Executive Architecture Portfolio &rarr;<\/a><br>)/g, '<span class="sig-portfolio" style="display:inline-block;">$1</span>');
