@@ -40,6 +40,22 @@ const MASTER_LINKS = [
   { class: 'sig-gofundme', color: '#f59e0b', url: 'https://www.gofundme.com/f/help-build-aura-hos-bridge-to-health-data-freedom', text: '💖 Support our Mission on GoFundMe &rarr;' }
 ];
 
+// UTM Append Helper
+function appendUTM(url, brandId) {
+  if (url.startsWith('mailto:') || url.startsWith('tel:')) return url;
+  try {
+    const u = new URL(url);
+    if (!u.searchParams.has('utm_source')) {
+      u.searchParams.set('utm_source', 'email_signature');
+      u.searchParams.set('utm_medium', 'email');
+      u.searchParams.set('utm_campaign', brandId);
+    }
+    return u.toString();
+  } catch (e) {
+    return url;
+  }
+}
+
 // Base HTML templates for generating the UI Panel
 function generateUIPanel(brands) {
   return `
@@ -76,18 +92,18 @@ function generateSignatureHTML(brand, index) {
     if (l.class) presetClasses.push(l.class);
   });
 
-  // Render Logos
+  // Render Logos with Alt tags
   const logosHtml = brand.logos.map(logo => {
     let style = `display: block; margin: ${logo.margin || '0 auto'};`;
     if (logo.radius) style += ` border-radius: ${logo.radius};`;
     if (logo.border) style += ` border: ${logo.border};`;
     if (logo.opacity) style += ` opacity: ${logo.opacity};`;
-    return `<img src="${logo.src}" width="${logo.width}" ${logo.height ? `height="${logo.height}"` : ''} style="${style}" />`;
+    return `<img src="${logo.src}" alt="${brand.name} Logo" width="${logo.width}" ${logo.height ? `height="${logo.height}"` : ''} style="${style}" />`;
   }).join('\n            ');
 
-  // Render Websites
+  // Render Websites with UTM tracking
   const websitesHtml = brand.websites.map(site => 
-    `<strong style="color: #0f172a;">${site.label}</strong> <a href="${site.url}" style="color: #3b82f6; text-decoration: none;">${site.text}</a>`
+    `<strong style="color: #0f172a;">${site.label}</strong> <a href="${appendUTM(site.url, brand.id)}" style="color: #3b82f6; text-decoration: none;">${site.text}</a>`
   ).join(' &nbsp;&nbsp;|&nbsp;&nbsp;\n              ');
 
   // Render Social Badges
@@ -102,7 +118,10 @@ function generateSignatureHTML(brand, index) {
   const socialsHtml = MASTER_SOCIALS.map(ms => {
     // Check if brand overrides this URL
     const brandOverride = brand.socials.find(s => s.badge === ms.badge && s.type === ms.type);
-    const url = brandOverride ? brandOverride.url : ms.url;
+    const rawUrl = brandOverride ? brandOverride.url : ms.url;
+    // Apply UTM tracking to social link
+    const url = appendUTM(rawUrl, brand.id);
+    
     // Check if it's in the preset, otherwise start hidden
     const isHidden = (ms.badge && !presetClasses.includes(ms.badge)) ? 'is-hidden' : '';
 
@@ -119,7 +138,7 @@ function generateSignatureHTML(brand, index) {
     return html;
   }).join('\n              ');
 
-  // Render Action Links
+  // Render Action Links with UTM tracking
   const allLinks = [];
   // Add brand-specific links that have no class (like Tech Demo)
   brand.actionLinks.filter(l => !l.class).forEach(l => allLinks.push(l));
@@ -130,7 +149,8 @@ function generateSignatureHTML(brand, index) {
   });
 
   const linksHtml = allLinks.map(link => {
-    let html = `<a href="${link.url}" style="font-size: ${link.class === 'sig-portfolio' ? '13px' : '12px'}; font-weight: bold; color: ${link.color}; text-decoration: none; display: inline-block; margin-bottom: 4px;">${link.text}</a><br>`;
+    const url = appendUTM(link.url, brand.id);
+    let html = `<a href="${url}" style="font-size: ${link.class === 'sig-portfolio' ? '13px' : '12px'}; font-weight: bold; color: ${link.color}; text-decoration: none; display: inline-block; margin-bottom: 4px;">${link.text}</a><br>`;
     if (link.class) {
       html = `<span class="${link.class} ${link.isHidden ? 'is-hidden' : ''}" style="display:inline-block;">${html}</span>`;
     }
@@ -143,7 +163,10 @@ function generateSignatureHTML(brand, index) {
   return `
     <!-- ${brand.tabLabel.toUpperCase()} SIGNATURE -->
     <div id="sig-${brand.id}" class="signature-wrapper ${isActive}" data-preset='${presetJson}'>
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; max-width: 600px; line-height: 1.4; font-size: 13px; background-color: #ffffff; color: #1e293b;">
+      <!--[if mso]>
+      <table cellpadding="0" cellspacing="0" border="0" width="600" style="width: 600px;"><tr><td>
+      <![endif]-->
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; max-width: 600px; line-height: 1.4; font-size: 13px; color: #1e293b; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
         <tr>
           <!-- Logo Cell -->
           <td valign="top" align="center" width="110" style="width: 110px; min-width: 110px; padding-right: 20px; border-right: 2px solid #3b82f6;">
@@ -182,6 +205,9 @@ function generateSignatureHTML(brand, index) {
           </td>
         </tr>
       </table>
+      <!--[if mso]>
+      </td></tr></table>
+      <![endif]-->
     </div>`;
 }
 
@@ -190,7 +216,11 @@ let template = fs.readFileSync(TEMPLATE_PATH, 'utf-8');
 
 // Generate the injected content
 const uiPanelHtml = generateUIPanel(config.brands);
-const signaturesHtml = config.brands.map((brand, index) => generateSignatureHTML(brand, index)).join('\n');
+let signaturesHtml = config.brands.map((brand, index) => generateSignatureHTML(brand, index)).join('\n');
+
+// HTML Minification (Optional aggressive minification logic)
+// To prevent Outlook rendering bugs, we strip excess whitespace between tags inside the signatures 
+signaturesHtml = signaturesHtml.replace(/>\s+</g, '><');
 
 // Perform the injection
 template = template.replace('<!-- INJECT:UI_PANEL -->', uiPanelHtml);
