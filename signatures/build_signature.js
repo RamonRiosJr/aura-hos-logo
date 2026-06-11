@@ -27,7 +27,7 @@ const UI_TOGGLES = [
 const MASTER_SOCIALS = [
   { type: 'linkedin', badge: '', url: 'https://www.linkedin.com/in/ramon-rios-a8ba3035/' },
   { type: 'github', badge: 'sig-github', url: 'https://github.com/RamonRiosJr' },
-  { type: 'youtube', badge: 'sig-youtube-humanos', url: 'https://www.youtube.com/@humanos.foundation' },
+  { type: 'youtube', badge: 'sig-youtube-humanos', url: 'https://www.youtube.com/@humanosfoundation' },
   { type: 'youtube', badge: 'sig-youtube-coqui', url: 'https://www.youtube.com/@coquicloud' },
   { type: 'facebook', badge: 'sig-facebook-humanos', url: 'https://www.facebook.com/HumanosFoundation' },
   { type: 'facebook', badge: 'sig-facebook-coqui', url: 'https://www.facebook.com/coquicloud' },
